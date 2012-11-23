@@ -15,8 +15,8 @@ EXTRA_CFLAGS:= -DENABLE_MODELS_GAME
 # Edit the lines below to point to any needed include and link paths
 # Or to change the compiler's optimization flags
 CC = g++
-COMPILEFLAGS = ${CPPFLAGS} -D_LINUX -D_REENTRANT -Wall  -O3 -march=nocona -msse3 -fno-strict-aliasing
-LINKFLAGS = ${LDFLAGS} -lGVars3 -lcvd $(3DSLIB)
+COMPILEFLAGS = ${CPPFLAGS} -D_LINUX -D_REENTRANT -Wall  -O3 -march=nocona -msse3 -fno-strict-aliasing 
+LINKFLAGS = ${LDFLAGS} -lGVars3 -lcvd $(3DSLIB) -llapack -lGLU
 
 # add OpenCV dependencies
 COMPILEFLAGS += $(shell pkg-config --cflags opencv)
